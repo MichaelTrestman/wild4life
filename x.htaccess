@@ -1,0 +1,24 @@
+RewriteEngine On
+rewritecond %{http_host} ^wild4life.org
+rewriteRule ^(.*) http://www.wild4life.org/$1 [R=301]
+
+Redirect permanent /preview /preview.php
+
+
+
+RewriteRule  ^home$ /index.php?s=0
+RewriteRule  ^aboutus$ /index.php?s=1
+RewriteRule  ^whatwedo$ /index.php?s=1&c=0
+RewriteRule  ^whoweare$ /index.php?s=1&c=1
+RewriteRule  ^advisoryboard$ /index.php?s=1&c=1&p=0
+RewriteRule  ^founders$ /index.php?s=1&c=1&p=1
+RewriteRule  ^ourteam$ /index.php?s=1&c=1&p=2
+RewriteRule  ^governingboard$ /index.php?s=1&c=1&p=3
+RewriteRule  ^howitworks$ /index.php?s=1&c=2
+RewriteRule  ^results$ /index.php?s=2
+RewriteRule  ^wherewework$ /index.php?s=3
+RewriteRule  ^partners$ /index.php?s=4
+RewriteRule  ^fieldpartners$ /index.php?s=4&c=0
+RewriteRule  ^venturepartners$ /index.php?s=4&c=1
+RewriteRule  ^donate$ /index.php?s=5
+RewriteRule  ^contactus$ /index.php?s=6

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /cgi/
+Disallow: /common/
+Disallow: /img/
+Disallow: /stats/
+Disallow: /newsletter.php
