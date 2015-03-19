@@ -157,10 +157,6 @@ var subnav_on = <?php echo ($q_two_type) ? $q_two_var : 'null'; ?>;
 </div>
 <!-- end top -->
 
-
-
-
-
 <!-- begin mid -->
 <div class="mid_container">
 <div class="mid_content">
@@ -183,39 +179,39 @@ var subnav_on = <?php echo ($q_two_type) ? $q_two_var : 'null'; ?>;
 <?php
 
 # home
-if (!$q_one_var || $q_one_var === '0') {
+// if (!$q_one_var || $q_one_var === '0') {
 include('content/home.php');
-}
+// }
 
 # what we do
-if ($q_one_var == 1 && !$q_two_type) {
+// if ($q_one_var == 1 && !$q_two_type) {
 include('content/what.php');
-}
+// }
 
 # who
-if ($q_one_var == 2 && !$q_two_type) {
+// if ($q_one_var == 2 && !$q_two_type) {
 include('content/who.php');
-}
+// }
 
 # who
-if ($q_one_var == 2 && $q_two_var === '0') {
-include('content/who.php');
-}
+// if ($q_one_var == 2 && $q_two_var === '0') {
+// include('content/who.php');
+// }
 
-# who
-if ($q_one_var == 2 && $q_two_var == '1') {
-include('content/who.php');
-}
+// # who
+// if ($q_one_var == 2 && $q_two_var == '1') {
+// include('content/who.php');
+// }
 
-# who
-if ($q_one_var == 2 && $q_two_var == '2') {
-include('content/who.php');
-}
+// # who
+// if ($q_one_var == 2 && $q_two_var == '2') {
+// include('content/who.php');
+// }
 
 # partners
-if ($q_one_var == 3) {
+// if ($q_one_var == 3) {
 include('content/partners.php');
-}
+// }
 
 # contact
 if ($q_one_var == 4) {
