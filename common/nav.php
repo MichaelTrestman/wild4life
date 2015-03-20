@@ -1,3 +1,11 @@
+<form id='payPalWidget' class='display-none' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="AKTM5KXH67J9U">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
 <div class="nav_container">
 <ul id='nav-ul'>
 
@@ -15,9 +23,13 @@
     newNavItem.id = 'nav_' + i;
     newNavItem.addEventListener('mouseenter', function(){ nav_over(i) });
     newNavItem.addEventListener('mouseleave', function(){ nav_out(i) });
-    newNavItem.addEventListener('click', function(){ gonav(i)});
+    if (site[0] !== 'Donate') {
+      newNavItem.addEventListener('click', function(){ gonav(i)});
+      // newNavItem.className = 'payPalButton'
+    }
 
     var text = document.createTextNode(site[0]);
+    if (site[0] === 'Donate'){ renderPayPalDonateButton(newNavItem); }
 
     var leftImage = document.createElement('IMG');
     leftImage.setAttribute('src', "img/nav/off/l.gif")
@@ -30,12 +42,29 @@
     rightImage.setAttribute('src', "img/nav/off/r_last.gif")
 
     newNavItem.appendChild(leftImage);
-    newNavItem.appendChild(text);
+
+    if (site[0] !== 'Donate') {
+      newNavItem.appendChild(text);
+    }
+
     newNavItem.appendChild(rightImage);
     navUl.insertBefore(newNavItem, navUl.firstChild);
   });
 
+  function renderPayPalDonateButton(el){
+    var payPalWidget = document.getElementById('payPalWidget');
+    payPalWidget.parentNode.removeChild(payPalWidget);
+    payPalWidget.className = 'payPalButton';
+    el.appendChild(payPalWidget);
+  }
+
+
 </script>
+
+
+
+
+
 
 
 <?php
