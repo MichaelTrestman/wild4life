@@ -322,7 +322,7 @@ a:hover {
 	margin:				0;
 	padding:			10px;
 	z-index:			1;
-	background:			url(../img/home/main_slideshow/slides/text_bg.jpg) no-repeat;
+	/*background:			url(../img/home/main_slideshow/slides/text_bg.jpg) no-repeat;*/
 	font: 				16px Arial, Helvetica, sans-serif;
 	line-height:		22px;
 	color: 				#4b4b4b;
@@ -338,7 +338,7 @@ a:hover {
 	margin:				0;
 	padding:			15px;
 	z-index:			1;
-	background:			url(../img/home/main_slideshow/slides/text_bg.jpg) no-repeat;
+	/*background:			url(../img/home/main_slideshow/slides/text_bg.jpg) no-repeat;*/
 	font: 				16px Arial, Helvetica, sans-serif;
 	line-height:		22px;
 	color: 				#4b4b4b;
