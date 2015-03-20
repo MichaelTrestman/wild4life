@@ -13,85 +13,12 @@
 <title>Wild4life</title>
 <script src="common/jquery-1.11.0.min.js"></script>
 <script src="common/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="common/animatedcollapse.js"></script>
+
 
 <script type="text/javascript">
 
-<?php # what we do
-if ($q_one_var == 1 && !$q_two_type) { ?>
-animatedcollapse.addDiv('what1', 'fade=0,speed=400,group=subcontent,hide=1');
-animatedcollapse.addDiv('what2', 'fade=0,speed=400,group=subcontent,hide=1');
-animatedcollapse.addDiv('what3', 'fade=0,speed=400,group=subcontent,hide=1');
-<?php } ?>
 
 
-<?php # about, main
-/*
- if ($q_one_var == 1 && !$q_two_type) { ?>
-<script type="text/javascript" src="common/AC_QuickTime.js"></script>
-<script type="text/javascript" src="common/AC_RunActiveContent.js"></script>
-<script type="text/javascript" src="common/AC_ActiveX.js"></script>
-<?php
-}*/ ?>
-
-
-<?php # home
-/*
-if ($q_one_var == 0 && !$q_two_type) { ?>
-animatedcollapse.addDiv('home1', 'fade=0,speed=400,group=subcontent,hide=1');
-animatedcollapse.addDiv('home2', 'fade=0,speed=400,group=subcontent,hide=1');
-animatedcollapse.addDiv('home3', 'fade=0,speed=400,group=subcontent,hide=1');
-<?php }
-*/ ?>
-
-<?php # about, main
-/*
-if ($q_one_var == 1 && !$q_two_type) { ?>
-animatedcollapse.addDiv('about1', 'fade=0,speed=400,group=subcontent,hide=1');
-//animatedcollapse.addDiv('about2', 'fade=0,speed=400,group=subcontent,hide=1');
-animatedcollapse.addDiv('about3', 'fade=0,speed=400,group=subcontent,hide=1');
-<?php }
-*/ ?>
-
-<?php # about, what we do
-/*
-if ($q_one_var == 1 && $q_two_var === '0') { ?>
-animatedcollapse.addDiv('what1', 'fade=0,speed=400,group=subcontent,hide=1');
-animatedcollapse.addDiv('what2', 'fade=0,speed=400,group=subcontent,hide=1');
-animatedcollapse.addDiv('what3', 'fade=0,speed=400,group=subcontent,hide=1');
-<?php }
-*/ ?>
-
-<?php # where we work
-/*
-if ($q_one_var == 3 && !$q_two_type) { ?>
-animatedcollapse.addDiv('botswana', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] === '0') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('cameroon', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] === '1') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('ethiopia', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] == '2') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('gabon', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] == '3') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('kenya', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] == '4') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('mozambique', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] == '5') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('nigeria', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] == '6') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('rwanda', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] == '7') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('southafrica', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] == '8') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('tanzania', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] == '9') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('zambia', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] == '10') ? '0' : '1'; ?>');
-animatedcollapse.addDiv('zimbabwe', 'fade=0,speed=400,group=subcontent,hide=<?php echo ($_POST['site'] == '11') ? '0' : '1'; ?>');
-
-animatedcollapse.addDiv('story1', 'fade=0,speed=400,group=stories,hide=1');
-animatedcollapse.addDiv('story2', 'fade=0,speed=400,group=stories,hide=1');
-animatedcollapse.addDiv('story3', 'fade=0,speed=400,group=stories,hide=1');
-<?php }
-*/ ?>
-
-
-animatedcollapse.ontoggle=function($, divobj, state){ //fires each time a DIV is expanded/contracted
-	//$: Access to jQuery
-	//divobj: DOM reference to DIV being expanded/ collapsed. Use "divobj.id" to get its ID
-	//state: "block" or "none", depending on state
-}
-
-animatedcollapse.init()
 
 </script>
 <?php
@@ -179,39 +106,35 @@ var subnav_on = <?php echo ($q_two_type) ? $q_two_var : 'null'; ?>;
 <?php
 
 # home
-// if (!$q_one_var || $q_one_var === '0') {
-include('content/home.php');
-// }
-
-# what we do
-// if ($q_one_var == 1 && !$q_two_type) {
-include('content/what.php');
-// }
+if (!$q_one_var || $q_one_var === '0') {
+  include('content/home.php');
+  include('content/what.php');
+}
 
 # who
-// if ($q_one_var == 2 && !$q_two_type) {
+if ($q_one_var == 2 && !$q_two_type) {
 include('content/who.php');
-// }
+}
+
+// who
+if ($q_one_var == 2 && $q_two_var === '0') {
+include('content/who.php');
+}
 
 # who
-// if ($q_one_var == 2 && $q_two_var === '0') {
-// include('content/who.php');
-// }
+if ($q_one_var == 2 && $q_two_var == '1') {
+include('content/who.php');
+}
 
-// # who
-// if ($q_one_var == 2 && $q_two_var == '1') {
-// include('content/who.php');
-// }
-
-// # who
-// if ($q_one_var == 2 && $q_two_var == '2') {
-// include('content/who.php');
-// }
+# who
+if ($q_one_var == 2 && $q_two_var == '2') {
+include('content/who.php');
+}
 
 # partners
-// if ($q_one_var == 3) {
+if ($q_one_var == 3) {
 include('content/partners.php');
-// }
+}
 
 # contact
 if ($q_one_var == 4) {
