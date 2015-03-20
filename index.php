@@ -62,7 +62,7 @@ var subnav_on = <?php echo ($q_two_type) ? $q_two_var : 'null'; ?>;
 
 </head>
 
-<body onload="init(<?php echo $section_id.','.(($page_id) ? $page_id : 'null'); ?>);<?php echo ($section_id === 0) ? ' start_main();' : NULL; ?>">
+<body onload="init(<?php echo $section_id.','.(($page_id) ? $page_id : 'null'); ?>);<?php echo ($section_id === 0) ? ' ' : NULL; ?>">
 
 <div class="container">
 
@@ -148,6 +148,7 @@ include('content/contact.php');
 <!-- end mid -->
 
 <!-- begin bottom -->
+<?php include('content/gallery.php');?>
 <?php include('common/footer.php'); ?>
 <!-- end bottom -->
 
