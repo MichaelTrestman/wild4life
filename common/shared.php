@@ -34,7 +34,7 @@ $sitemap[1][2] = false;
 $sitemap[1][3] = NULL;
 
 $sitemap[2] = array();
-$sitemap[2][0] = 'Who We Are';
+$sitemap[2][0] = 'About Us';
 $sitemap[2][1] = NULL;
 $sitemap[2][2] = array();
 $sitemap[2][2][0] = 'Our Team';
