@@ -1358,7 +1358,12 @@ a:hover {
 	height:				22px;
 	}
 
-
+.display-none {
+	display: none;
+}
+.payPalButton {
+	margin-top: -3px;
+}
 
 
 
