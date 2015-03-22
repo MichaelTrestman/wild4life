@@ -1,7 +1,9 @@
-<form id='payPalWidget' class='display-none' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<script src="common/jquery-1.11.0.min.js"></script>
+
+<form id='payPalWidget' class='opacity-0' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="AKTM5KXH67J9U">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<input type="image" id='payPalButton' src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
@@ -25,28 +27,32 @@
     newNavItem.addEventListener('mouseleave', function(){ nav_out(i) });
     if (site[0] !== 'Donate') {
       newNavItem.addEventListener('click', function(){ gonav(i)});
-      // newNavItem.className = 'payPalButton'
     }
 
     var text = document.createTextNode(site[0]);
-    if (site[0] === 'Donate'){ renderPayPalDonateButton(newNavItem); }
 
     var leftImage = document.createElement('IMG');
     leftImage.setAttribute('src', "img/nav/off/l.gif")
     leftImage.className = 'l';
     leftImage.id = 'nav_l_' + i.toString();
 
+    if (site[0] === 'Donate'){
+      // renderPayPalDonateButton(newNavItem);
+      newNavItem.addEventListener('click', function(){
+        // var payPalButton = document.getElementById('payPalWidget');
+        // payPalButton.getElementsByTagName('a')[0];
+        // console.log($);
+        console.log($ === jQuery);
+        $('#payPalWidget').trigger('submit');
+      })
+    }
     var rightImage = document.createElement('IMG');
     rightImage.className = 'r';
     rightImage.id = 'nav_r_' + i.toString();
     rightImage.setAttribute('src', "img/nav/off/r_last.gif")
 
     newNavItem.appendChild(leftImage);
-
-    if (site[0] !== 'Donate') {
-      newNavItem.appendChild(text);
-    }
-
+    newNavItem.appendChild(text);
     newNavItem.appendChild(rightImage);
     navUl.insertBefore(newNavItem, navUl.firstChild);
   });
@@ -54,7 +60,7 @@
   function renderPayPalDonateButton(el){
     var payPalWidget = document.getElementById('payPalWidget');
     payPalWidget.parentNode.removeChild(payPalWidget);
-    payPalWidget.className = 'payPalButton';
+    payPalWidget.className = 'payPalWidget';
     el.appendChild(payPalWidget);
   }
 
