@@ -33,7 +33,7 @@ function get_el(d) {
 }
 
 function hide_div(d) {
-	document.getElementById(d).style.display = "none";
+	// document.getElementById(d).style.display = "none";
 }
 
 function show_div(d) {

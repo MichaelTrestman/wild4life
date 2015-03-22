@@ -3,23 +3,6 @@
 <!-- begin main slideshow -->
 <script type="text/javascript">
 
-// function init_main_slideshow() {
-// 	var wndo_main_slideshow = new dw_scrollObj('main_slideshow', 'main_slideshow_inner');
-// 	wndo_main_slideshow.setUpScrollControls('main_slideshow_nav');
-// 	wndo_main_slideshow.setUpScrollControls('slide_controls');
-// 	dw_scrollObj.scrollToId('main_slideshow', 'main_slideshow_1', 'main_slideshow_inner', 0);
-// }
-// 	if ( dw_scrollObj.isSupported() ) {
-// 	dw_Event.add( window, 'load', init_main_slideshow);
-// 	}
-
-// var main_slideshow_count = 4;
-
-// main_slideshow_id = 1;
-
-// slide_pause = 6000;
-
-
 function jump_to_id_main(type,direction) {
 
 	if (main_slideshow_id == 1) {
@@ -118,60 +101,25 @@ function pause_click() {
 
 	<div id="main_slideshow" style="position: relative; float: left; overflow: hidden; width: 930px; height: 321px; margin: 0 0 0 47px; border: 5px solid #d0d0d0; background: #fff;">
 
-		<div id="slide_controls" style="position: absolute; left: 15px; top: 295px; width: 140px; height: 13px; text-align: left; margin: 0; padding: 0; z-index: 10000;">
+		<!-- <div id="slide_controls" style="position: absolute; left: 15px; top: 295px; width: 140px; height: 13px; text-align: left; margin: 0; padding: 0; z-index: 10000;">
 			<a href="#" onclick="jump_to_id(1); return false;" onmouseover="ball1.src='img/home/main_slideshow/ball_on.png';" onmouseout="ball1.src=((main_slideshow_id == 1) ? 'img/home/main_slideshow/ball_on.png' : 'img/home/main_slideshow/ball.png');"><img src="img/home/main_slideshow/ball_on.png" alt="" title="" border="0" style="position: relative; float: left; margin-right: 7px;" name="ball1" id="ball1"></a>
 			<a href="#" onclick="jump_to_id(2); return false;" onmouseover="ball2.src='img/home/main_slideshow/ball_on.png';" onmouseout="ball2.src=((main_slideshow_id == 2) ? 'img/home/main_slideshow/ball_on.png' : 'img/home/main_slideshow/ball.png');"><img src="img/home/main_slideshow/ball.png" alt="" title="" border="0" style="position: relative; float: left; margin-right: 7px;" name="ball2" id="ball2"></a>
 			<a href="#" onclick="jump_to_id(3); return false;" onmouseover="ball3.src='img/home/main_slideshow/ball_on.png';" onmouseout="ball3.src=((main_slideshow_id == 3) ? 'img/home/main_slideshow/ball_on.png' : 'img/home/main_slideshow/ball.png');"><img src="img/home/main_slideshow/ball.png" alt="" title="" border="0" style="position: relative; float: left; margin-right: 7px;" name="ball3" id="ball3"></a>
 			<a href="#" onclick="pause_click(); return false;" onmouseover="pausebutton.src='img/home/main_slideshow/'+((main_slide_play) ? 'pause' : 'play')+'_on.png';" onmouseout="pausebutton.src='img/home/main_slideshow/'+((main_slide_play) ? 'pause' : 'play')+'.png';"><img src="img/home/main_slideshow/pause.png" alt="" title="" border="0" style="position: relative; float: left; margin-right: 7px;" name="pausebutton" id="pausebutton"></a>
-		</div>
+		</div> -->
 
-		<div id="main_slideshow_inner" style="position: relative; float: left; margin-right: -9999px; padding: 0; margin: 0; left: 0px; z-index: 1;">
-			<table cellpadding="0" cellspacing="0" border="0" class="common" style="height: 321px; overflow:hidden;">
-				<tr>
-					<td valign="top" align="left" id="main_slideshow_1">
-						<div class="slide_container">
-							<div class="slide_img">
-								<img src="img/home/main_slideshow/slides/1-photo.jpg" alt="" title="" border="0">
-							</div>
-							<div class="slide_text">
-								<img src="img/home/main_slideshow/slides/1-type.jpg" alt="" title="" border="0">
-							</div>
-						</div>
-					</td>
-					<td valign="top" align="left" id="main_slideshow_2">
-						<div class="slide_container">
-							<div class="slide_img">
-								<img src="img/home/main_slideshow/slides/2-photo.jpg" alt="" title="" border="0">
-							</div>
-							<div class="slide_text">
-								<img src="img/home/main_slideshow/slides/2-type.jpg" alt="" title="" border="0">
-							</div>
-						</div>
-					</td>
-					<td valign="top" align="left" id="main_slideshow_3">
-						<div class="slide_container">
-							<div class="slide_img">
-								<img src="img/home/main_slideshow/slides/3-photo.jpg" alt="" title="" border="0">
-							</div>
-							<div class="slide_text">
-								<img src="img/home/main_slideshow/slides/3-type.jpg" alt="" title="" border="0">
-							</div>
-						</div>
-					</td>
+		<div id="main_slideshow_inner">
 
-					<!-- last is duplicate of first-->
-					<td valign="top" align="left" id="main_slideshow_4" style="padding-right: 20px;">
-						<div class="slide_container">
-							<div class="slide_img">
-								<img src="img/home/main_slideshow/slides/1-photo.jpg" alt="" title="" border="0">
-							</div>
-							<div class="slide_text">
-								<img src="img/home/main_slideshow/slides/1-type.jpg" alt="" title="" border="0">
-							</div>
-						</div>
-					</td>
-				</tr>
-			</table>
+			<div class="slide_container">
+				<div class="slide_img">
+					<img src="img/home/main_slideshow/slides/1-photo.jpg" alt="" title="" border="0">
+				</div>
+				<div class="slide_text">
+					<!-- <h2> no basic healthcare :(</h2> -->
+					<img src="img/home/main_slideshow/slides/1-type.jpg" alt="" title="" border="0">
+				</div>
+			</div>
+
 		</div>
 	</div>
 

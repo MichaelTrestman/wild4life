@@ -56,7 +56,8 @@ $sitemap[4][3] = NULL;
 
 $sitemap[5] = array();
 $sitemap[5][0] = 'Donate';
-$sitemap[5][1] = 'https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=454281064&vlrStratCode=3sxGCCOPB6xAbk5w96iBGzQ5CPM5hTkVNQ%2bwzLSZHBE2BD04dgfG7BJKIJ%2bvRGDm';
+$sitemap[5][1] = '#';
+//'https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=454281064&vlrStratCode=3sxGCCOPB6xAbk5w96iBGzQ5CPM5hTkVNQ%2bwzLSZHBE2BD04dgfG7BJKIJ%2bvRGDm';
 $sitemap[5][2] = false;
 $sitemap[5][3] = NULL;
 

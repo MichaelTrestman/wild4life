@@ -9,9 +9,7 @@
     wndo_gallery_slideshow.setUpScrollControls('gallery_slideshow_nav');
     dw_scrollObj.scrollToId('gallery_slideshow', 'gallery_slideshow_1', 'gallery_slideshow_inner', 0);
   }
-  if ( dw_scrollObj.isSupported() ) {
-    dw_Event.add( window, 'load', init_gallery_slideshow);
-  }
+
 
 
   var gallery_slideshow_count = 11;
@@ -70,7 +68,10 @@
 
   <div class="gallery_slideshow_container">
 
-    <div id="gallery_slideshow_nav"><a href="#" onclick="jump_to_id_gallery('gallery_slideshow','l'); return false;" id="gallery_slideshow_nav_l" style="position: absolute; left: 0px; top: 0px; width: 30px; height: 27px;" onmouseover="gallery_slideshow_arrow_left.src='img/home/gallery/arrow_left_r.gif';" onmouseout="gallery_slideshow_arrow_left.src='img/home/gallery/arrow_left.gif';"><img src="img/home/gallery/arrow_left.gif" alt="" title="" border="0" name="gallery_slideshow_arrow_left"></a><a href="#" onclick="jump_to_id_gallery('gallery_slideshow','r'); return false;" id="gallery_slideshow_nav_r" style="position: absolute; right: 0px; top: 0px; width: 30px; height: 27px;" onmouseover="gallery_slideshow_arrow_right.src='img/home/gallery/arrow_right_r.gif';" onmouseout="gallery_slideshow_arrow_right.src='img/home/gallery/arrow_right.gif';"><img src="img/home/gallery/arrow_right.gif" alt="" title="" border="0" name="gallery_slideshow_arrow_right"></a></div>
+    <div id="gallery_slideshow_nav">
+      <a href="#" onclick="jump_to_id_gallery('gallery_slideshow','l'); return false;" id="gallery_slideshow_nav_l" onmouseover="gallery_slideshow_arrow_left.src='img/home/gallery/arrow_left_r.gif';" onmouseout="gallery_slideshow_arrow_left.src='img/home/gallery/arrow_left.gif';">
+        <img src="img/home/gallery/arrow_left.gif" alt="" title="" border="0" name="gallery_slideshow_arrow_left">
+      </a><a href="#" onclick="jump_to_id_gallery('gallery_slideshow','r'); return false;" id="gallery_slideshow_nav_r"  onmouseover="gallery_slideshow_arrow_right.src='img/home/gallery/arrow_right_r.gif';" onmouseout="gallery_slideshow_arrow_right.src='img/home/gallery/arrow_right.gif';"><img src="img/home/gallery/arrow_right.gif" alt="" title="" border="0" name="gallery_slideshow_arrow_right"></a></div>
 
 
     <div id="gallery_slideshow" style="position: relative; float: left; overflow: hidden; width: 940px; height: 75px; margin: 0 0 0 47px; background: #fff;">

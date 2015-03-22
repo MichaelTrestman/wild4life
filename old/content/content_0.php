@@ -47,13 +47,13 @@ function jump_to_id_main(type,direction) {
 	main_slideshow_id = 1;
 	dw_scrollObj.scrollToId('main_slideshow', 'main_slideshow_1', 'main_slideshow_inner', 0);
 	}
-		
+
 	ball_num = (main_slideshow_id == main_slideshow_count) ? 1 : main_slideshow_id;
 	highlight_ball(ball_num);
-	
+
 	setTimeout("dw_scrollObj.scrollToId('main_slideshow', 'main_slideshow_'+main_slideshow_id)",10);
 
-	
+
 //	get_el('debug').innerHTML = main_slideshow_id;
 
 }
@@ -270,7 +270,7 @@ function pause_click() {
 <!-- paragraph 1 -->
 <img src="img/home/news/1.jpg" alt="" title="" border="0" align="left" class="subphoto">
 <h4>Reaching the other 70%</h4>
-<p>Like most of the world, healthcare in Africa is organized around regional hospitals in the cities and a system of satellite clinics. But in Africa, most of the population &mdash; 70% &mdash; live in rural areas outside the reach of this system, often with little or no access to health services. These are the people that we reach.</p> 
+<p>Like most of the world, healthcare in Africa is organized around regional hospitals in the cities and a system of satellite clinics. But in Africa, most of the population &mdash; 70% &mdash; live in rural areas outside the reach of this system, often with little or no access to health services. These are the people that we reach.</p>
 
 <div id="home1">
 <p>Health service providers in Africa are typically urban-based, and not geared to deliver health programs to dispersed populations in rural areas, where they often are most needed. Wild4life bridges the gap by building a rural platform to deliver health programs to these unserved communities in hard-to-reach areas. We establish strong relationships and mobilize rural communities around HIV to deliver an array of health services.</p>
@@ -365,9 +365,7 @@ function init_gallery_slideshow() {
 	wndo_gallery_slideshow.setUpScrollControls('gallery_slideshow_nav');
 	dw_scrollObj.scrollToId('gallery_slideshow', 'gallery_slideshow_1', 'gallery_slideshow_inner', 0);
 }
-	if ( dw_scrollObj.isSupported() ) {
-	dw_Event.add( window, 'load', init_gallery_slideshow);
-	}
+
 
 
 var gallery_slideshow_count = 11;
@@ -416,7 +414,7 @@ function jump_to_id_galleryx(type,direction) {
 	gallery_slideshow_id = 1;
 	dw_scrollObj.scrollToId('gallery_slideshow', 'gallery_slideshow_1', 'gallery_slideshow_inner', 0);
 	}
-	
+
 	setTimeout("dw_scrollObj.scrollToId('gallery_slideshow', 'gallery_slideshow_'+gallery_slideshow_id)",10);
 
 }

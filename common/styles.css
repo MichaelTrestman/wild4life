@@ -539,7 +539,7 @@ a:hover {
 	}
 
 .mid_content .home_gallery_container #gallery_slideshow_nav {
-	position:			absolute;
+	/*position:			absolute;*/
 	left:				17px;
 	top:				24px;
 	width:				1000px;
@@ -555,7 +555,7 @@ a:hover {
 	}
 
 .mid_content .home_gallery_container .slide_container .slide_img {
-	position:			absolute;
+	/*position:			absolute;*/
 	left:				0px;
 	top:				0px;
 	width: 				125px;
@@ -1361,10 +1361,12 @@ a:hover {
 .display-none {
 	display: none;
 }
-.payPalButton {
+.payPalWidget {
 	margin-top: -3px;
 }
-
+.opacity-0 {
+	opacity: 0;
+}
 
 
 

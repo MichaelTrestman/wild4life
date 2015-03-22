@@ -13,6 +13,10 @@
 <title>Wild4life</title>
 <script src="common/jquery-1.11.0.min.js"></script>
 <script src="common/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript">
+  console.log($ === jQuery);
+
+</script>
 
 
 <script type="text/javascript">
@@ -48,7 +52,7 @@ var subnav_on = <?php echo ($q_two_type) ? $q_two_var : 'null'; ?>;
 </script>
 
 <script type="text/javascript" src="common/scripts.js"></script>
-<script type="text/javascript" src="common/scroll/dw_event.js"></script>
+<!-- <script type="text/javascript" src="common/scroll/dw_event.js"></script>
 <script type="text/javascript" src="common/scroll/dw_scroll.js"></script>
 <script type="text/javascript" src="common/scroll/dw_scrollbar.js"></script>
 <script type="text/javascript" src="common/scroll/scroll_controls.js"></script>
@@ -57,7 +61,7 @@ var subnav_on = <?php echo ($q_two_type) ? $q_two_var : 'null'; ?>;
 <script type="text/javascript" src="common/lightbox/scriptaculous.js?load=effects,builder"></script>
 <script type="text/javascript" src="common/lightbox/lightbox.js"></script>
 <link rel="stylesheet" href="common/lightbox.css" type="text/css" media="screen">
-
+ -->
 <link rel="stylesheet" type="text/css" href="common/styles.css">
 
 <script>
